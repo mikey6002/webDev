@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap');
+
+body {
+    font-family: 'Cabin'; /* Sets the font family for the entire document */
+    background-color: #6383ac; /* Sets the background color of the body */
+}
+
+.header {
+    /* Styles for the header */
+    display: flex;
+    background-color: lightblue;
+    padding: 1%;
+    align-items: center;
+    margin-left: -10px;
+    margin-right: -10px;
+    margin-top: -10px;
+}
+
+.header-text {
+    text-align: center; 
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: auto;
+}
+
+
+.Card {
+    color: #000;
+    background-color: #fff;
+    padding-bottom: 20px;
+    box-shadow: 0 15px 25px #817c7c33;
+    font-size: medium;
+    border-radius: 14px;
+    backdrop-filter: blur(2px);
+    text-align: center;
+    margin-bottom: 30px;
+    height: 450px
+}
+
+.Card img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 10px
+}
+
+h4 {
+    margin-top: 0;
+    font-size: 18px
+}
+
+/* Hover effect for info container */
+.info-container:hover {
+    box-shadow: 0 0 30px lightblue; 
+}
+
+button:hover {
+    /* Hover effect for buttons */
+    background-color: lightblue;
+    color: #FFFFFF;
+}
+
+/* Styles for search container */
+#search-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#search-input {
+    /* Styles for search input */
+    padding: 5px;
+    font-size: 16px;
+}
+
+#search-btn {
+    /* Styles for search button */
+    padding: 6px 10px;
+    font-size: 16px;
+    background-color: #3498db; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#search-btn:hover {
+    background-color: #2980b9; /* Hover effect for search button */
+}
+
+.stats-card {
+    /* Styles for statistics card */
+    background-color: #a8b0bc;
+    border-radius: 7px;
+    padding: 1%;
+    margin: 1%;
+    width: 100%;
+    text-align: center;
+}
+
+/* Styles for container holding places */
+#places-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+/* Styles for place images */
+.place-img {
+    width: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #FFFFFF; 
+}
+
+.place-card {
+    /* Styles for place cards */
+    background-color: #FFFFFF;
+    padding: 1%;
+    margin: 1%;
+    width: 300px;
+    text-align: center;
+    border-radius: 7px;
+}
+
+/* Hover effect for place cards */
+.place-card:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px lightblue;
+}
+
+/* Styles for button container */
+#button-container {
+    text-align: center;
+}
+
+button {
+    /* Styles for buttons */
+    font-family: 'Cabin';
+    border: none;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 7px;
+}
