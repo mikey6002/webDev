@@ -30,6 +30,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
+![flashcard](https://github.com/mikey6002/webDev/assets/72505018/ffe15b1b-a02b-4649-a8ba-bdb5977f08c8)
 
 
 
