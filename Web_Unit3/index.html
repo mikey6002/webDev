@@ -4,34 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flashcards!</title>
-
-
-  <!-- header row with logo -->
-  <div class="header">
-    <h1 class="header-text">Flash Cards!</h1>
-  </div>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Linking to external CSS file -->
 </head>
 <body>
 
-<div class = "description">
+<!-- Header -->
+<div class="header">
+  <h1 class="header-text">Flash Cards!</h1>
+</div>
+
+<!-- Description -->
+<div class="description">
   <p>How Well Do You Know Operating Systems?</p>
 </div>
 
-<div class = "number_of_cards">
+<!-- Number of Cards -->
+<div class="number_of_cards">
   <p>Number Of Cards: 10</p>
 </div>
 
-  <div class="flashcard-container" id="flashcard-container">
-    <!-- Your flashcard content will be dynamically generated here -->
-  </div>
+<!-- Score Container -->
+<div class="score_container">
+  <p>Score: <span id="score">0</span></p>
+</div>
 
-  <div class="button-container">
-    <button id="prev-button">Previous Card</button>
-    <button id="next-button">Next Card</button>
-  </div>
+<!-- Submit Answer -->
+<div class="submit_answer">
+  <input type="text" id="submit-input" placeholder="Place Your Answer Here">
+  <button id="search-btn">Submit</button>
+</div>
 
-  <script src="script.js"></script>
+<!-- Flashcard Container -->
+<div class="flashcard-container" id="flashcard-container">
+  <!-- Flashcard content will be dynamically generated here -->
+</div>
+
+<!-- Button Container -->
+<div class="button-container">
+  <button id="prev-button">Previous Card</button>
+  <button id="next-button">Next Card</button>
+</div>
+
+<!-- Linking to external JavaScript file -->
+<script src="script.js"></script>
 
 </body>
 </html>

@@ -13,7 +13,7 @@ body {
     perspective: 1000px;
     position: relative;
     bottom: -29px;
-    left: 20%;
+    left: 5%;
     transform: translateX(-50%);
   }
   
@@ -51,22 +51,20 @@ body {
     transform: rotateY(180deg);
   }
   .button-container {
-    position: relative;
-    bottom: -210px;
-    left: -14%;
+    position: fixed;
+    bottom: 150px;
+    left: 45%;
     transform: translateX(-40%);
   }
   
   .header {
-    /* Styles for the header */
     display: flex;
     background-color: rgb(83, 218, 236);
     padding: 0.5%;
     border-radius: 5px; /* Rounded corners */
-    align-items: relative;
-    margin-left: 200px;
-    margin-right: -730px;
-    margin-top: -500px;
+    align-items: fixed;
+    margin-left: 20px;
+    margin-top: -600px;
   }
 
 
@@ -88,10 +86,10 @@ body {
     display: flex;
     background-color: rgb(83, 218, 236);
     padding: 0.5%;
-    position: relative;
+    position: fixed;
     border-radius: 5px; /* Rounded corners */
-    bottom: 160px;
-    left: 43%;
+    top: 130px;
+    left: 36%;
     transform: translateX(-40%);
   }
 
@@ -99,13 +97,58 @@ body {
     display: flex;
     background-color: rgb(83, 218, 236);
     padding: 0.5%;
-    position: relative;
+    position: fixed;
     border-radius: 5px; /* Rounded corners */
-    bottom: 160px;
-    left: 40%;
+    top: 130px;
+    left: 58%;
     transform: translateX(-40%);
   }
 
+  .submit_answer{
+    position: fixed;
+    margin-top: 490px;
+    margin-right:100px ;
+    padding: 10px 20px; 
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+  }
 
+  .score_container {
+    display: flex;
+    position: fixed;
+    right: 4%;
+    top: 50px; 
+    right: 90px; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .flash-red {
+    animation: flash-red-animation 0.5s infinite alternate;
+  }
+  .flash-green{
+    animation: flash-green-animation 0.5s infinite alternate;
+  }
+  
+  @keyframes flash-red-animation {
+    0% {
+      background-color: #ffcccc; /* Light red */
+    }
+    100% {
+      background-color: #ff0000; /* Red */
+    }
+  }
 
+  @keyframes flash-green-animation {
+    0% {
+      background-color: #2eb865; /* Light green */
+    }
+    100% {
+      background-color: #00ff6e; /* Green */
+    }
+  }
+  
+  
 

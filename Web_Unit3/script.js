@@ -2,22 +2,25 @@ document.addEventListener('DOMContentLoaded', function () {
     const flashcardContainer = document.getElementById('flashcard-container');
     const nextButton = document.getElementById('next-button');
     const prevButton = document.getElementById('prev-button');
+    const submitButton = document.getElementById('search-btn');
+    const submitInput = document.getElementById('submit-input');
+    const scoreDisplay = document.getElementById('score');
 
     let currentCardIndex = 0;
+    let score = 0;
     
     // Define flashcards data
     const flashcardsData = [
-      { question: 'Question 1:In Operating Systems What are the 3 process states?', answer: 'Answer: Running, blocked , ready' },
-      { question: 'Question 2:The role of the PCB (process control block)', answer: 'Answer: Stores info of a process and list all active processes' },
-      { question: 'Question 3:What are the PCB contents', answer: 'Answer:  pid, scheduling state, cpu state, pointers, memory locations, file openers' },
-      { question: 'Question 4: mechanism for interruption', answer: 'Answer: IRQ, software interrupts, exception,signals' },
-      { question: 'Question 5: DMA(Direct Acess Memory)', answer: 'Answer: a method that allows devices to transfer data directly from memory without CPU' },
-      { question: 'Question 6:spin lock', answer: 'Answer:repeaditly checks if a lock is avaiable' },
-      { question: 'Question 7:signal function', answer: 'Answer:used to notify waiting threads ' },
-      { question: 'Question 8:semaphoric variable', answer: 'Answer:a counter,que,of threads or process mostly have wait and signal' },
-      { question: 'Question 9:Mutual Exclusion', answer: 'Answer:specfic form of sync to prevent conflict when access shared resources' },
-      { question: 'Question 10:What is a process?', answer: 'Answer:executing a program' },
-      // Add more flashcards as needed
+      { question: 'Question 1:In Operating Systems What are the 3 process states?', answer: 'Running,blocked,ready' },
+      { question: 'Question 2:The role of the PCB (process control block)', answer: 'Stores info of a process and list all active processes' },
+      { question: 'Question 3:What are the PCB contents', answer: 'Pid,scheduling state, cpu state,pointers, memory locations,file openers' },
+      { question: 'Question 4: mechanism for interruption', answer: 'IRQ,software interrupts,exception,signals' },
+      { question: 'Question 5: DMA(Direct Acess Memory)', answer: 'A method that allows devices to transfer data directly from memory without CPU' },
+      { question: 'Question 6:spin lock', answer: 'Repeaditly checks if a lock is avaiable' },
+      { question: 'Question 7:signal function', answer: 'Used to notify waiting threads ' },
+      { question: 'Question 8:semaphoric variable', answer: 'A counter,que,of threads or process mostly have wait and signal' },
+      { question: 'Question 9:Mutual Exclusion', answer: 'Specfic form of sync to prevent conflict when access shared resources' },
+      { question: 'Question 10:What is a process?', answer: 'Executing a program' },
     ];
   
     // Function to update the card display
@@ -54,7 +57,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Update the card display initially
     updateCardDisplay();
 
-    // Add event listeners to the buttons
+    // event listeners to the buttons
     nextButton.addEventListener('click', function() {
         currentCardIndex = (currentCardIndex + 1) % flashcardsData.length;
         updateCardDisplay();
@@ -64,4 +67,28 @@ document.addEventListener('DOMContentLoaded', function () {
         currentCardIndex = (currentCardIndex - 1 + flashcardsData.length) % flashcardsData.length;
         updateCardDisplay();
     });
+
+    submitButton.addEventListener('click', function() {
+        const userAnswer = submitInput.value.trim().toLowerCase();
+        const correctAnswer = flashcardsData[currentCardIndex].answer.toLowerCase();
+    
+        if (userAnswer === correctAnswer) {
+            scoreDisplay.classList.add('flash-green');
+            setTimeout(function() {
+                scoreDisplay.classList.remove('flash-green');
+            }, 500);
+            score++;
+        } else {
+            // If the answer is wrong, add the flash-red class to the score container
+            scoreDisplay.classList.add('flash-red');
+            // Remove the flash-red class after 500ms (half a second)
+            setTimeout(function() {
+                scoreDisplay.classList.remove('flash-red');
+            }, 500);
+            score--; // Deduct one point for a wrong answer
+        }
+    
+        scoreDisplay.textContent = score;
+    });
+    
 });
