@@ -64,22 +64,22 @@ body {
     border-radius: 5px; /* Rounded corners */
     align-items: fixed;
     margin-left: 20px;
-    margin-top: -600px;
+    margin-top: -810px;
   }
 
 
   .button-container button {
-    padding: 10px 20px; /* Adjust padding as needed */
-    background-color: #4CAF50; /* Green background color */
-    color: white; /* White text color */
-    border: none; /* Remove border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Add cursor on hover */
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    padding: 10px 20px; 
+    background-color: #4CAF50;
+    color: white; 
+    border: none; 
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; 
   }
 
   .button-container button:hover {
-    background-color: #45a049; /* Darken background color on hover */
+    background-color: #45a049; 
   }
 
   .description{
@@ -87,7 +87,7 @@ body {
     background-color: rgb(83, 218, 236);
     padding: 0.5%;
     position: fixed;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px; 
     top: 130px;
     left: 36%;
     transform: translateX(-40%);
@@ -98,7 +98,7 @@ body {
     background-color: rgb(83, 218, 236);
     padding: 0.5%;
     position: fixed;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     top: 130px;
     left: 58%;
     transform: translateX(-40%);
